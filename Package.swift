@@ -34,6 +34,11 @@ let performanceFrameworks = ["FirebaseABTesting": "7c65a5822f0b5cf04ede192e9b980
                              "FirebasePerformance": "75e539a0e1497e96172a800a38fb6834e02a9c7f4a224ba26813ebd9fef2aba1",
                              "FirebaseRemoteConfig": "5eed64ef5183a50aedc43edeb4fa34bdf38e2614eafebef886cc6b599d805d46"]
 
+// Merging:
+let frameworks = crashlyticsFrameworks
+    .merging(messagingFrameworks) { (_, new) in new }
+    .merging(remoteConfigFrameworks) { (_, new) in new }
+    .merging(performanceFrameworks) { (_, new) in new }
 
 let package = Package(
     name: "FirebaseLite",
@@ -41,65 +46,17 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "FirebaseAnalyticsLite",
-            targets: Array.init(analyticsFrameworks.keys)
-        ),
-        .library(
-            name: "FirebaseCrashlyticsLite",
-            targets: Array.init(crashlyticsFrameworks.keys)
-        ),
-        .library(
-            name: "FirebaseMessagingLite",
-            targets: Array.init(messagingFrameworks.keys)
-        ),
-        .library(
-            name: "FirebaseRemoteConfigLite",
-            targets: Array.init(remoteConfigFrameworks.keys)
-        ),
-        .library(
-            name: "FirebasePerformanceLite",
-            targets: Array.init(performanceFrameworks.keys)
+            name: "FirebaseLite",
+            targets: Array.init(frameworks.keys)
         ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
-    targets: [
-        analyticsFrameworks.map { name, checksum
-                .binaryTarget(
-                    name: name,
-                    url: "https://github.com/c-villain/FirebaseLite/releases/download/8.15.0/\(name).xcframework.zip",
-                    checksum: checksum
-                )
-        },
-        crashlyticsFrameworks.map { name, checksum
-                .binaryTarget(
-                    name: name,
-                    url: "https://github.com/c-villain/FirebaseLite/releases/download/8.15.0/\(name).xcframework.zip",
-                    checksum: checksum
-                ),
-        },
-        messagingFrameworks.map { name, checksum
-                .binaryTarget(
-                    name: name,
-                    url: "https://github.com/c-villain/FirebaseLite/releases/download/8.15.0/\(name).xcframework.zip",
-                    checksum: checksum
-                ),
-        },
-        remoteConfigFrameworks.map { name, checksum
-                .binaryTarget(
-                    name: name,
-                    url: "https://github.com/c-villain/FirebaseLite/releases/download/8.15.0/\(name).xcframework.zip",
-                    checksum: checksum
-                ),
-        },
-        performanceFrameworks.map { name, checksum
-                .binaryTarget(
-                    name: name,
-                    url: "https://github.com/c-villain/FirebaseLite/releases/download/8.15.0/\(name).xcframework.zip",
-                    checksum: checksum
-                ),
-        }
-    ]
+    targets: frameworks.map { name, checksum in
+            .binaryTarget(name: name,
+                          url: "https://github.com/c-villain/FirebaseLite/releases/download/9.2.0/\(name).xcframework.zip",
+                          checksum: checksum)
+    }
 )
