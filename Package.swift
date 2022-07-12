@@ -41,7 +41,8 @@ let performanceFrameworks = ["FirebaseABTesting": "7c65a5822f0b5cf04ede192e9b980
                              "FirebaseRemoteConfig": "5eed64ef5183a50aedc43edeb4fa34bdf38e2614eafebef886cc6b599d805d46"]
 
 // FirebaseInstallations
-let installationsFrameworks = ["FirebaseCore": "e6a47e3f70813c265bcee2a72453a60233ad2d2b2ac483da56eb5771f64b3277",
+let installationsFrameworks = ["FirebaseInstallations": "04a84ef178f2f054f6d3692912ed3b77ba67fc44afb45ef3c36ff1c672f1ab1c",
+                               "FirebaseCore": "e6a47e3f70813c265bcee2a72453a60233ad2d2b2ac483da56eb5771f64b3277",
                                "PromisesObjC": "f2cf49c852e579bc49571405bb702c39d3b9715b10a8a443d72c0339b569a48c",
                                "GoogleUtilities": "71421317aaf1e2dafb5b30be503c18fcb767b7a0489712ff8ee27d12a941b292"]
 
