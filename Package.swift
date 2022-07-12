@@ -3,6 +3,12 @@
 
 import PackageDescription
 
+// FirebaseCore
+let coreFrameworks = ["FirebaseCore": "e6a47e3f70813c265bcee2a72453a60233ad2d2b2ac483da56eb5771f64b3277",
+                      "FirebaseCoreInternal": "ce4a4ca4d5c2c83bb9832716413f839bafab00e477ae3827c91fecdabddc316d",
+                      "FirebaseCoreDiagnostics": "0199b4219db06e1c81720cd5b9b8d8bb8b41c9d63b3cc34b7552f06fea3237d9",
+                      "GoogleUtilities": "71421317aaf1e2dafb5b30be503c18fcb767b7a0489712ff8ee27d12a941b292"]
+
 // FirebaseAnalytics
 let analyticsFrameworks = [ "FirebaseAnalytics": "e5d8d2e2d1ba61133984da25c6a92d86e9eacb308f440b386a31e305d56866ad",
                             "FirebaseAnalyticsSwift": "252763a6e6668353539a1924958a8d78248905827466420649173164d9a164c9",
@@ -34,11 +40,18 @@ let performanceFrameworks = ["FirebaseABTesting": "7c65a5822f0b5cf04ede192e9b980
                              "FirebasePerformance": "75e539a0e1497e96172a800a38fb6834e02a9c7f4a224ba26813ebd9fef2aba1",
                              "FirebaseRemoteConfig": "5eed64ef5183a50aedc43edeb4fa34bdf38e2614eafebef886cc6b599d805d46"]
 
+// FirebaseInstallations
+let installationsFrameworks = ["FirebaseCore": "e6a47e3f70813c265bcee2a72453a60233ad2d2b2ac483da56eb5771f64b3277",
+                               "PromisesObjC": "f2cf49c852e579bc49571405bb702c39d3b9715b10a8a443d72c0339b569a48c",
+                               "GoogleUtilities": "71421317aaf1e2dafb5b30be503c18fcb767b7a0489712ff8ee27d12a941b292"]
+
 // Merging:
-let frameworks = crashlyticsFrameworks
+let frameworks = coreFrameworks
+    .merging(crashlyticsFrameworks) { (_, new) in new }
     .merging(messagingFrameworks) { (_, new) in new }
     .merging(remoteConfigFrameworks) { (_, new) in new }
     .merging(performanceFrameworks) { (_, new) in new }
+    .merging(installationsFrameworks) { (_, new) in new }
 
 let package = Package(
     name: "FirebaseLite",
