@@ -48,6 +48,7 @@ let installationsFrameworks = ["FirebaseInstallations": "04a84ef178f2f054f6d3692
 
 // Merging:
 let frameworks = coreFrameworks
+    .merging(analyticsFrameworks) { (_, new) in new }
     .merging(crashlyticsFrameworks) { (_, new) in new }
     .merging(messagingFrameworks) { (_, new) in new }
     .merging(remoteConfigFrameworks) { (_, new) in new }
