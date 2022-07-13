@@ -56,12 +56,12 @@ let frameworks = coreFrameworks
     .merging(installationsFrameworks) { (_, new) in new }
 
 let package = Package(
-    name: "FirebaseLite",
+    name: "FirebaseBinaries",
     platforms: [.iOS(.v11), .macOS(.v10_12), .tvOS(.v12), .watchOS(.v7)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "FirebaseLite",
+            name: "FirebaseBinaries",
             targets: Array.init(frameworks.keys)
         ),
     ],
@@ -71,7 +71,7 @@ let package = Package(
     ],
     targets: frameworks.map { name, checksum in
             .binaryTarget(name: name,
-                          url: "https://github.com/c-villain/FirebaseLite/releases/download/9.2.0/\(name).xcframework.zip",
+                          url: "https://github.com/c-villain/FirebaseBinaries/releases/download/9.2.0/\(name).xcframework.zip",
                           checksum: checksum)
     }
 )
