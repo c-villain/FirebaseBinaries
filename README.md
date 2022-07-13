@@ -1,6 +1,6 @@
-# FirebaseLite
+# FirebaseBinaries
 
-[![SPM compatible](https://img.shields.io/badge/release-9.2.0-blue)](https://github.com/c-villain/FirebaseLite/releases/tag/9.2.0)
+[![SPM compatible](https://img.shields.io/badge/release-9.2.0-blue)](https://github.com/c-villain/FirebaseBinaries/releases/tag/9.2.0)
 ![.iOS(.v11)](https://img.shields.io/badge/iOS-12-blue)
 ![.macOS(.v10_12)](https://img.shields.io/badge/macOS-10.12-blue)
 ![.tvOS(.v12)](https://img.shields.io/badge/tvOS-12-blue)
@@ -17,11 +17,11 @@ Package with XCFrameworks for following sources:
 
 ## Swift Package Manager
 
-To integrate FirebaseLite into your project using SwiftPM add the following to your `Package.swift`:
+To integrate FirebaseBinaries into your project using SwiftPM add the following to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/c-villain/FirebaseLite", from: "9.2.0"),
+    .package(url: "https://github.com/c-villain/FirebaseBinaries", from: "9.2.0"),
 ],
 ```
 
