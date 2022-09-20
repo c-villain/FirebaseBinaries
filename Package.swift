@@ -70,6 +70,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
+        .package(name: "JXKit", url: "https://github.com/jectivex/JXKit.git", .upToNextMajor(from: "2.0")),
     ],
     targets: frameworks.map { name, checksum in
             .binaryTarget(name: name,
