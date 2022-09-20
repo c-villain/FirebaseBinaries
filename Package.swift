@@ -54,7 +54,8 @@ let frameworks = ["FirebaseAppCheckInterop": "7bb0597924fb7e66784e8c3bac8ceedfa2
                   "SwiftProtobuf": "65f4bc5f7fab48aa472f9fabf919beea25741554289661de7496e23bafcd6544",
                   "FirebaseAnalyticsSwift": "739b95ed0eb969ef1cdaf744b0df13eb173175840dcd2d1d7eb996830bd5cb22",
                   "FirebaseRemoteConfigSwift": "07f18b7c48fcf3975ea2c30105c1b71958062a48b4064224a6f993b953765640",
-                  "nanopb": "8d984d98569037b35c48ba8d289057603f11cb5c8cbb5114a9508fede398baee"]
+                  "nanopb": "8d984d98569037b35c48ba8d289057603f11cb5c8cbb5114a9508fede398baee",
+                  "PromisesObjC": "9066d8a6fc037ac5cb3c0fcb234b29e02a2624d0897c5a0438a5e870518608e3"]
 
 let package = Package(
     name: "FirebaseBinaries",
