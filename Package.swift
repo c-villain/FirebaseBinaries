@@ -6,7 +6,7 @@ import PackageDescription
 let frameworks = ["FirebaseAppCheckInterop": "7bb0597924fb7e66784e8c3bac8ceedfa2b092d89ee175ca51bfcf2304ecd749",
                   "UserMessagingPlatform": "d8d7656a875c4e514332692ef8917e6fa66d100562f090bae0b011b53b82de8a",
                   "GTMSessionFetcher": "6567efe93973c318cd9f662979769edc2f0692d0ba2ae1b7a202438357f6d0bb",
-                  "GoogleMobileAds": "af4d5eca535adb476bf1df18257a39a07fb8593e28e861afdfec568ab8c79900",
+                  "GoogleMobileAds": "220bde34153d59dbf71981d77bf76fe0d07d5e740be745610aca878bfd36de46",
                   "BoringSSL-GRPC": "2d54ab1c5f77e86d4c31de9eb8bef0f45fde51d01f1ad3a46ad63d37e7515496",
                   "FirebaseDatabaseSwift": "8a814502ed75f132ad43c9ef870859ea8362ef909198a43697955bee21a759fd",
                   "Libuv-gRPC": "5a7180d615c221c70a4b4e023bd7262f98521d961e0c6c9bf1aab62159ccc1f6",
